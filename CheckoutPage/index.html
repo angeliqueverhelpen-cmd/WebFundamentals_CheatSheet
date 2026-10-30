@@ -1,0 +1,91 @@
+<!doctype html>
+
+<html lang="en">
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta charset="UTF-8" />
+
+    <link rel="stylesheet" href="styles.css" />
+    <title>Checkout Page</title>
+  </head>
+
+  <body>
+    <header>
+      <h1>Checkout</h1>
+    </header>
+
+    <main>
+      <section aria-labelledby="cart-heading">
+        <h2 id="cart-heading">Your Cart</h2>
+
+        <figure>
+          <img src="sneaker_afb.jpg" alt="Sneaker" />
+          <figcaption>Ultra-run 5000</figcaption>
+          <!-- figure caption for the product -->
+        </figure>
+        <!-- figure element for the product image and caption -->
+
+        <p>Price: $120</p>
+      </section>
+
+      <section aria-labelledby="payment-heading">
+        <!-- section for payment information -->
+        <h2 id="payment-heading">Payment Information</h2>
+        <form class="checkout-form">
+          <label for="card-name">
+            Cardholder Name <span aria-hidden="true">*</span>
+          </label>
+          <input
+            id="card-name"
+            type="text"
+            name="card-name"
+            placeholder="John Doe"
+            autocomplete="cc-name"
+            required
+          />
+
+          <label for="card-number">
+            Card Number <span aria-hidden="true">*</span>
+          </label>
+          <input
+            id="card-number"
+            type="text"
+            name="card-number"
+            placeholder="1234 5678 9012 3456"
+            inputmode="numeric"
+            autocomplete="cc-number"
+            aria-describedby="card-number-help"
+            required
+          />
+          <p id="card-number-help">
+            Please enter your 16-digit card number without spaces or dashes.
+          </p>
+
+          <label for="card-date">
+            Expiry Date <span aria-hidden="true">*</span>
+          </label>
+          <input
+            id="card-date"
+            type="date"
+            name="card-date"
+            autocomplete="cc-exp"
+            required
+          />
+
+          <label for="card-cvv"> CVV <span aria-hidden="true">*</span> </label>
+          <input
+            id="card-cvv"
+            type="text"
+            name="card-cvv"
+            placeholder="123"
+            inputmode="numeric"
+            autocomplete="cc-csc"
+            required
+          />
+
+          <button id="submit" type="submit">Place Order</button>
+        </form>
+      </section>
+    </main>
+  </body>
+</html>
